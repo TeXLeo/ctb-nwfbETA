@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="getdata.js"></script>
+        <title>Citybus &amp; NWFB ETA</title>
+    </head>
+    <body>
+        <table id="eta">
+            <thead>
+                <tr><th>實時抵站時間</th><th>路線</th><th>方向</th><th>備註</th></tr>
+            </thead>
+            <tfoot>
+                <tr id="eta_loading"><td colspan="4">加載中...</td></tr>
+                <tr><td colspan="4">上次實時抵站更新時間: <span id="eta_last_updated"/></td></tr>
+            </tfoot>
+            <tbody />
+        </table>
+        <p id="failure"/>
+        <p id="loading">
+            資料更新中，請稍候
+            <br/>
+            <span id="company_count">2</span> company(s) remaining.<br/>
+            <span id="route_count">0</span> route(s) remaining.<br/>
+            <span id="stop_count">0</span> stop(s) remaining.
+        </p>
+        <form>
+            <p>
+                <label>輸入路線: <input id="route" name="route" maxlength="4"/></label><br/>
+                <label>選擇路線:<br/><select id="route_list"/></label><br/>
+                <input type="hidden" name="direction" id="direction" value="O"/>
+                <input type="submit" id="route_submit"/>
+            </p>
+        </form>
+        <form>
+            <p>
+                方向n: <span id="direction_text"/> <button id="switch_direction" type="button">選擇方向</button> <br/>
+                <label>選擇等候巴士站: <select id="stop_list" name="stop"/></label>
+            </p>
+            <p>
+                <label>途徑此站的其他巴士路線: <select multiple="multiple" id="common_route_list" name="selections"/></label>
+            </p>
+            <button type="submit" id="selection_submit">重新載入</button>
+        </form>
+        <p>
+            
+        </p>
+    </body>
+</html>
