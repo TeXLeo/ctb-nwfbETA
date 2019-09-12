@@ -38,10 +38,10 @@
         <form>
             <p>
                 方向: <span id="direction_text"/> <button id="switch_direction" type="button">選擇方向</button> <br/>
-                <label>選擇等候巴士站: <select id="stop_list" name="stop"/></label>
+                <label>選擇等候巴士站: <select multiple="multiple" size="10" id="stop_list" name="stop"/></label>
             </p>
             <p>
-                <label>途徑此站的其他巴士路線: <select multiple="multiple" id="common_route_list" name="selections"/></label>
+                <label>途徑此站的其他巴士路線: <select multiple="multiple" size="10" id="common_route_list" name="selections"/></label>
             </p>
             <button type="submit" id="selection_submit">重新載入</button>
         </form>
