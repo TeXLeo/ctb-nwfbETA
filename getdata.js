@@ -476,7 +476,7 @@ $(document).ready(
                 const input = $route.val().toUpperCase();
                 $route.val(input);
                 if (!routes.hasOwnProperty(input)) {
-                    alert('Invalid route');
+                    alert('路線錯誤');
                     return false;
                 }
                 $route_list.val(input);
